@@ -59,3 +59,42 @@ if (array[i] % 2 == 0)
 count++;
 }
 Console.WriteLine($"Summ of even numbers in the array is: {count}");
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Задача 36: Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
+
+// [3, 7, 23, 12] -> 19
+
+// [-4, -6, 89, 6] -> 0
+
+// int[] CreateRandomArray(int N, int start, int end) //готовая функция рандом массива
+// {
+// int[] array = new int[N];
+// for (int i = 0; i < N; i++)
+// {
+// array[i] = new Random().Next(start, end + 1);
+// }
+// return array;
+// }
+
+// void ShowArray(int[] array) //функция вывода массива
+// {
+// for (int i = 0; i < array.Length; i++)
+// {
+// Console.Write(array[i] + " ");
+// }
+// Console.WriteLine();
+// }
+// int[] array = CreateRandomArray(5, 10, 100);
+
+// ShowArray(array);
+
+// int summOddIndx = 0;
+
+// for ( int i = 0; i < array.Length; i++)
+// {
+// if ( i % 2 != 0)
+// summOddIndx += array[i];
+// }
+// Console.WriteLine($"Summ of numbers at Odd indexes in the array is: {summOddIndx}");
