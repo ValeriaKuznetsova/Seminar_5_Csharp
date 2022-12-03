@@ -67,6 +67,45 @@ Console.Clear();
 
 // [-4, -6, 89, 6] -> 0
 
+// int[] CreateRandomArray(int N, int start, int end) //готовая функция рандом массива
+// {
+// int[] array = new int[N];
+// for (int i = 0; i < N; i++)
+// {
+// array[i] = new Random().Next(start, end + 1);
+// }
+// return array;
+// }
+
+// void ShowArray(int[] array) //функция вывода массива
+// {
+// for (int i = 0; i < array.Length; i++)
+// {
+// Console.Write(array[i] + " ");
+// }
+// Console.WriteLine();
+// }
+// int[] array = CreateRandomArray(5, 10, 100);
+
+// ShowArray(array);
+
+// int summOddIndx = 0;
+
+// for ( int i = 0; i < array.Length; i++)
+// {
+// if ( i % 2 != 0)
+// summOddIndx += array[i];
+// }
+// Console.WriteLine($"Summ of numbers at Odd indexes in the array is: {summOddIndx}");
+
+
+// Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
+
+// [3 7 22 2 78] -> 76
+
+
+
+
 int[] CreateRandomArray(int N, int start, int end) //готовая функция рандом массива
 {
 int[] array = new int[N];
@@ -85,15 +124,19 @@ Console.Write(array[i] + " ");
 }
 Console.WriteLine();
 }
-int[] array = CreateRandomArray(5, 10, 100);
+
+int[] array = CreateRandomArray(10, 1, 100);
 
 ShowArray(array);
 
-int summOddIndx = 0;
-
-for ( int i = 0; i < array.Length; i++)
+int max = array[0];
+int min = array[0];
+for (int i = 0; i < array.Length; i++)
 {
-if ( i % 2 != 0)
-summOddIndx += array[i];
+if (array[i]>max)
+max = array[i];
+if (array[i]<min)
+min = array[i];
 }
-Console.WriteLine($"Summ of numbers at Odd indexes in the array is: {summOddIndx}");
+int diff = max - min;
+Console.WriteLine($"Difference between min & max elements is: {diff}");
